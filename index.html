@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101114">
+  <meta name="description" content="Голоса героев Dota 2 в Telegram. Отправляй любимые фразы голосовыми сообщениями в любой чат.">
+  <title>Dota Voice — голоса героев Dota 2</title>
+  <style>
+    :root {
+      color-scheme: dark;
+      --bg: #101114;
+      --panel: #191a1f;
+      --text: #f2f0ed;
+      --muted: #aaa7a2;
+      --accent: #d65b3e;
+      --accent2: #f08a55;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0; min-height: 100vh; display: grid; place-items: center;
+      padding: 28px 18px; color: var(--text); background:
+        radial-gradient(ellipse at 50% 5%, rgba(174, 65, 43, .18), transparent 42%),
+        linear-gradient(145deg, #111216, #0b0c0f 72%);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+    }
+    .page { width: min(100%, 760px); text-align: center; }
+    .brand {
+      display: inline-flex; align-items: center; gap: 10px; margin-bottom: 48px;
+      color: #d7d1ca; font-size: 12px; font-weight: 800; letter-spacing: .2em;
+    }
+    .mark {
+      width: 31px; height: 31px; display: grid; place-items: center;
+      border: 1px solid rgba(240,138,85,.65); color: var(--accent2);
+      transform: rotate(45deg); font-size: 15px;
+    }
+    .mark span { transform: rotate(-45deg); }
+    .eyebrow {
+      color: var(--accent2); font-size: 11px; font-weight: 800;
+      letter-spacing: .22em; text-transform: uppercase;
+    }
+    h1 {
+      margin: 17px auto 15px; max-width: 680px;
+      font-size: clamp(38px, 8vw, 68px); line-height: .99;
+      letter-spacing: -.055em; font-weight: 850;
+    }
+    h1 em { color: var(--accent2); font-style: normal; }
+    .lead {
+      max-width: 510px; margin: 0 auto; color: var(--muted);
+      font-size: clamp(15px, 2.5vw, 18px); line-height: 1.65;
+    }
+    .visual {
+      position: relative; width: min(100%, 550px); height: 125px;
+      margin: 37px auto 31px; overflow: hidden; border-radius: 5px;
+      border: 1px solid rgba(255,255,255,.07);
+      background:
+        linear-gradient(90deg, rgba(16,17,20,.12), rgba(16,17,20,.25)),
+        repeating-linear-gradient(135deg, transparent 0 18px, rgba(255,255,255,.025) 19px 20px),
+        radial-gradient(ellipse at 50% 120%, rgba(214,91,62,.35), transparent 65%),
+        #191a1f;
+    }
+    .visual::before, .visual::after {
+      content: ""; position: absolute; top: 50%; width: 160px; height: 160px;
+      border: 1px solid rgba(240,138,85,.22); transform: translateY(-50%) rotate(45deg);
+    }
+    .visual::before { left: -85px; }
+    .visual::after { right: -85px; }
+    .sound {
+      position: absolute; inset: 0; display: flex; align-items: center;
+      justify-content: center; gap: 6px;
+    }
+    .sound i {
+      display: block; width: 4px; border-radius: 8px;
+      height: var(--h); background: linear-gradient(var(--accent2), var(--accent));
+      opacity: .9;
+    }
+    .cta {
+      display: inline-flex; align-items: center; justify-content: center; gap: 12px;
+      min-height: 58px; padding: 0 29px; border-radius: 4px;
+      background: linear-gradient(110deg, #c84d34, #e47748);
+      color: white; text-decoration: none; text-transform: uppercase;
+      font-size: 13px; font-weight: 850; letter-spacing: .09em;
+      box-shadow: 0 10px 35px rgba(198,75,48,.22);
+      transition: transform .18s ease, filter .18s ease, box-shadow .18s ease;
+    }
+    .cta:hover { transform: translateY(-2px); filter: brightness(1.08); box-shadow: 0 14px 40px rgba(198,75,48,.3); }
+    .cta svg { width: 19px; height: 19px; fill: currentColor; }
+    .hint { margin-top: 16px; color: #77757a; font-size: 12px; }
+    footer { margin-top: 66px; color: #5f5e63; font-size: 11px; letter-spacing: .06em; }
+    @media (max-width: 480px) {
+      .brand { margin-bottom: 42px; }
+      .visual { height: 105px; margin: 30px auto 27px; }
+      .cta { width: 100%; padding: 0 16px; }
+      footer { margin-top: 52px; }
+    }
+    @media (prefers-reduced-motion: reduce) { .cta { transition: none; } }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <div class="brand"><span class="mark"><span>✦</span></span> DOTA VOICE</div>
+    <div class="eyebrow">Твой голосовой арсенал</div>
+    <h1>Голоса героев<br><em>Dota 2</em> — в Telegram</h1>
+    <p class="lead">Любимые фразы героев в формате голосовых сообщений. Выбирай, отправляй и используй их в любом чате.</p>
+
+    <div class="visual" aria-hidden="true">
+      <div class="sound">
+        <i style="--h:17px"></i><i style="--h:29px"></i><i style="--h:43px"></i>
+        <i style="--h:24px"></i><i style="--h:58px"></i><i style="--h:35px"></i>
+        <i style="--h:72px"></i><i style="--h:46px"></i><i style="--h:27px"></i>
+        <i style="--h:62px"></i><i style="--h:34px"></i><i style="--h:51px"></i>
+        <i style="--h:22px"></i><i style="--h:42px"></i><i style="--h:18px"></i>
+      </div>
+    </div>
+
+    <a class="cta" href="https://t.me/Dota2Voice_bot?start=promoSite" target="_blank" rel="noopener noreferrer">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21.8 3.2 18.5 20c-.25 1.18-.92 1.47-1.87.92l-5.17-3.81-2.5 2.4c-.28.28-.52.52-1.07.52l.37-5.27 9.6-8.67c.42-.37-.09-.58-.65-.21L5.34 13.3.23 11.7c-1.11-.35-1.13-1.11.23-1.65L20.43 2.4c.92-.34 1.73.22 1.37.8Z"/></svg>
+      Открыть бота в Telegram
+    </a>
+    <div class="hint">Быстрый доступ к фразам героев — прямо из Telegram</div>
+    <footer>НЕБОЛЬШОЙ ПРОЕКТ ДЛЯ ФАНАТОВ DOTA 2</footer>
+  </main>
+</body>
+</html>
